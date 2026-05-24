@@ -1,6 +1,20 @@
 
 # Pokémon Pokédex OOP Exercise
 
+## Starter code base
+
+A minimal Python starter implementation is included:
+
+- `/home/runner/work/eric-mock-interview/eric-mock-interview/pokedex/core.py`
+- `/home/runner/work/eric-mock-interview/eric-mock-interview/pokedex/__init__.py`
+- `/home/runner/work/eric-mock-interview/eric-mock-interview/example_usage.py`
+
+This starter intentionally keeps the design simple:
+
+- core models (`Pokemon`, `Form`, `Stats`, `Ability`, `PokemonType`)
+- basic `Pokedex` storage/search/pagination
+- explicit `NotImplementedError` placeholders for merge/compare tasks in Parts E/F
+
 ## Story
 
 You recently joined the engineering team at the Pokémon Research Institute.
