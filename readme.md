@@ -45,7 +45,7 @@ For Part A, these methods may simply return the base values.
 
 ---
 
-# Part B — Pokédex Storage and Search
+# Part B — Pokédex Storage, Search, and Pagination
 
 Implement a `Pokedex` class.
 
@@ -53,14 +53,54 @@ Required methods:
 
 ```python
 pokedex.add(pokemon)
-pokedex.find_by_name(name)
-pokedex.filter_by_type(pokemon_type)
-pokedex.list_all()
+
+pokedex.find_by_name(
+    name,
+    page=1,
+    page_size=10,
+)
+
+pokedex.filter_by_type(
+    pokemon_type,
+    page=1,
+    page_size=10,
+)
+
+pokedex.list_all(
+    page=1,
+    page_size=10,
+)
 ```
 
-Requirements:
+---
+
+## Pagination Requirements
+
+All query methods should support pagination.
+
+- `page` is 1-indexed
+- `page_size` must be positive
+- Pagination should be deterministic
+- Query methods should return metadata along with results
+
+Suggested return shape:
+
+```python
+{
+    "items": [...],
+    "page": 1,
+    "page_size": 10,
+    "total_items": 37,
+    "total_pages": 4
+}
+```
+
+---
+
+## Search Requirements
 
 - Name lookup should be case-insensitive.
+- Name lookup may return multiple results.
 - Filtering by type should return all matching Pokémon.
 - Your solution should work efficiently as the Pokédex grows.
 
@@ -150,7 +190,7 @@ pokedex.find_unique_pokemon(other_pokedex)
 pokedex.merge(other_pokedex)
 ```
 
-Behavior:
+---
 
 ## `find_common_pokemon(other_pokedex)`
 
