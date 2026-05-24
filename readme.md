@@ -1,10 +1,37 @@
+````markdown id="0tb6xz"
 # Pokémon Pokédex OOP Exercise
 
-## Overview
+## Story
 
-You are building a simplified Pokédex system.
+You recently joined the engineering team at the Pokémon Research Institute.
 
-The goal of this exercise is to evaluate:
+For years, Pokémon researchers across different regions have maintained their own independent Pokédex systems. Unfortunately, each region evolved their software differently:
+
+- Kanto stores Pokémon differently than Alola
+- Some regions support Mega Evolutions
+- Others support regional forms
+- Some researchers track shiny variants separately
+- Others treat them as attributes of the same Pokémon
+
+As the newest engineer on the team, your task is to help modernize the Pokédex platform.
+
+Your system needs to:
+
+- support different Pokémon variants
+- scale to large Pokédexes
+- support search and pagination
+- merge Pokédexes from different regions
+- compare differences between Pokédex versions
+
+The Pokémon professors care deeply about clean, maintainable software because new Pokémon forms and mechanics are constantly being discovered.
+
+Your goal is to design a flexible system that can evolve over time without becoming difficult to maintain.
+
+---
+
+# Overview
+
+This exercise evaluates:
 
 - object-oriented design
 - inheritance vs. composition tradeoffs
@@ -15,7 +42,14 @@ The goal of this exercise is to evaluate:
 
 You may use AI tools during the exercise, but you should be prepared to explain and justify your design decisions.
 
-This is intentionally open-ended. Focus on writing code that is clean, maintainable, and easy to extend.
+This problem is intentionally open-ended. Focus on writing code that is:
+
+- readable
+- maintainable
+- extensible
+- easy to reason about
+
+Avoid overengineering.
 
 ---
 
@@ -46,6 +80,8 @@ For Part A, these methods may simply return the base values.
 ---
 
 # Part B — Pokédex Storage, Search, and Pagination
+
+Researchers need a way to browse and search very large Pokédexes efficiently.
 
 Implement a `Pokedex` class.
 
@@ -108,7 +144,7 @@ Suggested return shape:
 
 # Part C — Forms
 
-Add support for Pokémon forms.
+Different regions represent Pokémon forms differently.
 
 Examples:
 
@@ -143,11 +179,13 @@ pokemon.get_effective_stats()
 
 should account for the active form.
 
+The research team expects many more forms to be added in the future.
+
 ---
 
 # Part D — Traits and Abilities
 
-Add support for traits and abilities.
+Researchers also track additional Pokémon metadata.
 
 Traits are simple labels such as:
 
@@ -176,9 +214,15 @@ Example:
 Shiny Mega X Charizard
 ```
 
+Researchers frequently discover new traits, so your design should remain flexible.
+
 ---
 
 # Part E — Merge and Compare Pokédexes
+
+Different regional professors maintain separate Pokédexes.
+
+Your team now needs tooling to combine and compare them.
 
 You are given another `Pokedex`.
 
@@ -218,9 +262,15 @@ Duplicate Pokémon should only appear once.
 
 Do not mutate either original Pokédex.
 
+Researchers may later merge Pokédexes from dozens of regions at once.
+
 ---
 
 # Part F — Pokédex Diff
+
+A new requirement has arrived from the Pokémon Data Synchronization Team.
+
+Researchers want to understand *exactly* how two Pokédexes differ.
 
 Implement:
 
@@ -319,6 +369,8 @@ Comparison rules:
 - ability comparison may use ability names only
 - output should be deterministic
 
+The synchronization team plans to use your diff output for future auditing and migration tooling.
+
 ---
 
 # Example Usage
@@ -363,3 +415,4 @@ Prefer:
 - thoughtful tradeoffs
 
 over overengineering.
+````
