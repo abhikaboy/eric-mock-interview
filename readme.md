@@ -1,4 +1,4 @@
-````markdown id="0tb6xz"
+
 # Pokémon Pokédex OOP Exercise
 
 ## Story
@@ -415,4 +415,3 @@ Prefer:
 - thoughtful tradeoffs
 
 over overengineering.
-````
