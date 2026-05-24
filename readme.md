@@ -1,6 +1,16 @@
 
 # Pokémon Pokédex OOP Exercise
 
+## Starter code base
+
+A simple Python starter is included:
+
+- `/home/runner/work/eric-mock-interview/eric-mock-interview/starter.py`
+
+This starter intentionally does **not** provide class implementations.
+
+Candidates should build their own classes and design from scratch based on the requirements below.
+
 ## Story
 
 You recently joined the engineering team at the Pokémon Research Institute.
