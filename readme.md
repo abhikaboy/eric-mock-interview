@@ -3,17 +3,13 @@
 
 ## Starter code base
 
-A minimal Python starter implementation is included:
+A simple Python starter is included:
 
-- `/home/runner/work/eric-mock-interview/eric-mock-interview/pokedex/core.py`
-- `/home/runner/work/eric-mock-interview/eric-mock-interview/pokedex/__init__.py`
-- `/home/runner/work/eric-mock-interview/eric-mock-interview/example_usage.py`
+- `/home/runner/work/eric-mock-interview/eric-mock-interview/starter.py`
 
-This starter intentionally keeps the design simple:
+This starter intentionally does **not** provide class implementations.
 
-- core models (`Pokemon`, `Form`, `Stats`, `Ability`, `PokemonType`)
-- basic `Pokedex` storage/search/pagination
-- explicit `NotImplementedError` placeholders for merge/compare tasks in Parts E/F
+Candidates should build their own classes and design from scratch based on the requirements below.
 
 ## Story
 
